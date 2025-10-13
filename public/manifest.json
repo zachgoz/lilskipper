@@ -1,0 +1,19 @@
+{
+  "name": "Little Skipper - Learn with Boats!",
+  "short_name": "Little Skipper",
+  "description": "A fun STEM learning app about boats and sailing for toddlers",
+  "theme_color": "#4A90E2",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/boat-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

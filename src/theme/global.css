@@ -1,0 +1,143 @@
+/* Global styles for toddler-friendly UI */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+/* Disable text selection and long-press context menus */
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Game container */
+.game-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #4A90E2 0%, #B3E5FC 100%);
+  position: relative;
+}
+
+/* Back button - always top-left */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.back-button:active {
+  transform: scale(0.92);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu button styles */
+.menu-button {
+  width: 280px;
+  height: 120px;
+  margin: 16px;
+  border-radius: 24px;
+  font-size: 32px;
+  font-weight: bold;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.menu-button:active {
+  transform: scale(0.95) translateY(2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.animate-wiggle {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+.animate-float {
+  animation: float 2s ease-in-out infinite;
+}
+
+/* Loading states */
+.loading-spinner {
+  width: 80px;
+  height: 80px;
+  border: 8px solid rgba(255, 255, 255, 0.3);
+  border-top: 8px solid #FFD93D;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* High contrast text */
+.big-text {
+  font-size: 48px;
+  font-weight: bold;
+  color: #263238;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Celebration confetti overlay */
+.celebration-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}

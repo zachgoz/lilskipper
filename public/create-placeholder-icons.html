@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Placeholder Icons</title>
+</head>
+<body>
+    <h2>Generating placeholder icons...</h2>
+    <script>
+        // Create 192x192 icon
+        const canvas192 = document.createElement('canvas');
+        canvas192.width = 192;
+        canvas192.height = 192;
+        const ctx192 = canvas192.getContext('2d');
+        
+        // Background
+        ctx192.fillStyle = '#4A90E2';
+        ctx192.fillRect(0, 0, 192, 192);
+        
+        // Simple boat shape
+        ctx192.fillStyle = '#FFFFFF';
+        ctx192.beginPath();
+        ctx192.moveTo(60, 120);
+        ctx192.lineTo(132, 120);
+        ctx192.lineTo(120, 140);
+        ctx192.lineTo(72, 140);
+        ctx192.closePath();
+        ctx192.fill();
+        
+        // Mast
+        ctx192.fillStyle = '#FFFFFF';
+        ctx192.fillRect(94, 60, 4, 60);
+        
+        // Sail
+        ctx192.beginPath();
+        ctx192.moveTo(96, 60);
+        ctx192.lineTo(130, 100);
+        ctx192.lineTo(96, 120);
+        ctx192.closePath();
+        ctx192.fill();
+        
+        canvas192.toBlob(blob => {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'icon-192.png';
+            a.click();
+        });
+        
+        // Create 512x512 icon
+        const canvas512 = document.createElement('canvas');
+        canvas512.width = 512;
+        canvas512.height = 512;
+        const ctx512 = canvas512.getContext('2d');
+        
+        // Background
+        ctx512.fillStyle = '#4A90E2';
+        ctx512.fillRect(0, 0, 512, 512);
+        
+        // Simple boat shape (scaled up)
+        ctx512.fillStyle = '#FFFFFF';
+        ctx512.beginPath();
+        ctx512.moveTo(160, 320);
+        ctx512.lineTo(352, 320);
+        ctx512.lineTo(320, 373);
+        ctx512.lineTo(192, 373);
+        ctx512.closePath();
+        ctx512.fill();
+        
+        // Mast
+        ctx512.fillStyle = '#FFFFFF';
+        ctx512.fillRect(250, 160, 12, 160);
+        
+        // Sail
+        ctx512.beginPath();
+        ctx512.moveTo(256, 160);
+        ctx512.lineTo(346, 266);
+        ctx512.lineTo(256, 320);
+        ctx512.closePath();
+        ctx512.fill();
+        
+        setTimeout(() => {
+            canvas512.toBlob(blob => {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'icon-512.png';
+                a.click();
+            });
+        }, 1000);
+        
+        document.body.innerHTML += '<p>Icons generated! Check your downloads folder for icon-192.png and icon-512.png</p>';
+        document.body.innerHTML += '<p>Move them to the public/ folder of your project.</p>';
+    </script>
+</body>
+</html>

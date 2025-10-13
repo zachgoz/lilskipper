@@ -1,0 +1,26 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ocean background -->
+  <rect width="512" height="512" fill="#4A90E2"/>
+
+  <!-- Sun -->
+  <circle cx="400" cy="100" r="60" fill="#FFD93D"/>
+
+  <!-- Sailboat -->
+  <!-- Hull -->
+  <path d="M 200 350 L 312 350 L 290 380 L 222 380 Z" fill="#8B4513" stroke="#654321" stroke-width="4"/>
+
+  <!-- Mast -->
+  <line x1="256" y1="200" x2="256" y2="350" stroke="#A0522D" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Sail -->
+  <path d="M 256 200 L 340 280 L 256 350 Z" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="3"/>
+
+  <!-- Flag -->
+  <path d="M 256 200 L 256 170 L 290 185 Z" fill="#FF5252"/>
+
+  <!-- Waves -->
+  <path d="M 0 400 Q 64 380 128 400 T 256 400 T 384 400 T 512 400 L 512 512 L 0 512 Z"
+        fill="#5BA3D0" opacity="0.7"/>
+  <path d="M 0 420 Q 64 400 128 420 T 256 420 T 384 420 T 512 420 L 512 512 L 0 512 Z"
+        fill="#6BB4E1" opacity="0.5"/>
+</svg>

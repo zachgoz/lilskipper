@@ -1,0 +1,99 @@
+/* Toddler-friendly color palette - high contrast, bright, ocean-themed */
+:root {
+  /* Primary ocean blues */
+  --ion-color-primary: #4A90E2;
+  --ion-color-primary-rgb: 74, 144, 226;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #4180c7;
+  --ion-color-primary-tint: #5c9be5;
+
+  /* Secondary sunny yellow */
+  --ion-color-secondary: #FFD93D;
+  --ion-color-secondary-rgb: 255, 217, 61;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-contrast-rgb: 0, 0, 0;
+  --ion-color-secondary-shade: #e0bf36;
+  --ion-color-secondary-tint: #ffdd50;
+
+  /* Success green */
+  --ion-color-success: #4CAF50;
+  --ion-color-success-rgb: 76, 175, 80;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #439a46;
+  --ion-color-success-tint: #5eb762;
+
+  /* Warning orange */
+  --ion-color-warning: #FF9800;
+  --ion-color-warning-rgb: 255, 152, 0;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #e08600;
+  --ion-color-warning-tint: #ffa21a;
+
+  /* Danger red */
+  --ion-color-danger: #F44336;
+  --ion-color-danger-rgb: 244, 67, 54;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #d73b30;
+  --ion-color-danger-tint: #f5564a;
+
+  /* Light background */
+  --ion-color-light: #E3F2FD;
+  --ion-color-light-rgb: 227, 242, 253;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #c8d5df;
+  --ion-color-light-tint: #e6f3fd;
+
+  /* Medium gray */
+  --ion-color-medium: #90A4AE;
+  --ion-color-medium-rgb: 144, 164, 174;
+  --ion-color-medium-contrast: #000000;
+  --ion-color-medium-contrast-rgb: 0, 0, 0;
+  --ion-color-medium-shade: #7f9099;
+  --ion-color-medium-tint: #9badb6;
+
+  /* Dark navy */
+  --ion-color-dark: #263238;
+  --ion-color-dark-rgb: 38, 50, 56;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #212c31;
+  --ion-color-dark-tint: #3c474c;
+
+  /* Background colors */
+  --ion-background-color: #E3F2FD;
+  --ion-text-color: #263238;
+
+  /* Font sizes - larger for toddlers */
+  --ion-font-size-huge: 48px;
+  --ion-font-size-large: 36px;
+  --ion-font-size-medium: 24px;
+}
+
+/* Toddler-specific overrides */
+* {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Ensure all interactive elements are large enough */
+ion-button {
+  --border-radius: 20px;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --padding-start: 24px;
+  --padding-end: 24px;
+  font-size: 24px;
+  font-weight: bold;
+  min-height: 72px;
+  text-transform: none;
+}
+
+ion-icon {
+  font-size: 48px;
+}

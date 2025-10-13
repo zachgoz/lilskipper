@@ -1,0 +1,49 @@
+{
+  "name": "little-skipper",
+  "version": "1.0.0",
+  "description": "A STEM boating and sailing learning app for toddlers",
+  "author": "Your Name",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "lint": "eslint .",
+    "ionic:serve": "vite",
+    "ionic:build": "tsc && vite build"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/app": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/haptics": "^6.0.0",
+    "@capacitor/ios": "^6.0.0",
+    "@capacitor/splash-screen": "^6.0.0",
+    "@capacitor/status-bar": "^6.0.0",
+    "@ionic/react": "^8.0.0",
+    "@ionic/react-router": "^8.0.0",
+    "howler": "^2.2.4",
+    "ionicons": "^7.2.2",
+    "localforage": "^1.10.0",
+    "phaser": "^3.80.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^5.3.4",
+    "react-router-dom": "^5.3.4"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.0.0",
+    "@types/howler": "^2.2.11",
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "@types/react-router": "^5.1.20",
+    "@types/react-router-dom": "^5.3.3",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11",
+    "vitest": "^1.2.0"
+  }
+}

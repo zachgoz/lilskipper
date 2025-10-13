@@ -1,0 +1,186 @@
+.home-content {
+  --background: linear-gradient(180deg, #4A90E2 0%, #B3E5FC 100%);
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 40px;
+  z-index: 2;
+}
+
+.app-title {
+  font-size: 56px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  margin: 0 0 8px 0;
+}
+
+.app-subtitle {
+  font-size: 28px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+
+.stars-display {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFD93D;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  margin-top: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  z-index: 2;
+}
+
+.menu-button {
+  height: 100px;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  opacity: 0;
+}
+
+.menu-button.animate-bounce-in {
+  animation: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.menu-button ion-icon {
+  font-size: 40px;
+  margin-right: 12px;
+}
+
+.menu-button:active {
+  transform: scale(0.95) translateY(2px);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button-bounce {
+  animation: button-press 0.3s ease;
+}
+
+@keyframes button-press {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+.build-boat-button {
+  --background: #4A90E2;
+  --background-activated: #3A7DC2;
+}
+
+.memory-button {
+  --background: #FFD93D;
+  --background-activated: #E0C030;
+  --color: #263238;
+}
+
+.drawing-button {
+  --background: #4CAF50;
+  --background-activated: #3C9F40;
+}
+
+.settings-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  --color: white;
+  z-index: 10;
+}
+
+.settings-button ion-icon {
+  font-size: 36px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Decorative waves */
+.wave-decoration {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background-repeat: repeat-x;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.wave-1 {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath d='M0,60 C150,100 350,0 600,60 C850,120 1050,60 1200,60 L1200,120 L0,120 Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  animation: wave-slide 8s linear infinite;
+  z-index: 1;
+}
+
+.wave-2 {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath d='M0,40 C200,80 400,20 600,60 C800,100 1000,40 1200,60 L1200,120 L0,120 Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  animation: wave-slide 12s linear infinite reverse;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+@keyframes wave-slide {
+  0% { background-position: 0 0; }
+  100% { background-position: 1200px 0; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 48px;
+  }
+
+  .menu-button {
+    height: 90px;
+    font-size: 24px;
+  }
+
+  .menu-button ion-icon {
+    font-size: 36px;
+  }
+}
+
+@media (max-height: 700px) {
+  .home-header {
+    margin-bottom: 20px;
+  }
+
+  .app-title {
+    font-size: 40px;
+  }
+
+  .menu-buttons {
+    gap: 12px;
+  }
+
+  .menu-button {
+    height: 80px;
+  }
+}
