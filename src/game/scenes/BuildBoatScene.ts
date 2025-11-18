@@ -45,6 +45,13 @@ export default class BuildBoatScene extends Phaser.Scene {
     // Load assets
     this.load.setPath('/assets/');
 
+    // Load Level 2 real photo puzzle pieces
+    this.load.image('level2-hull', 'boats/level2-hull.png');
+    this.load.image('level2-bow', 'boats/level2-bow.png');
+    this.load.image('level2-console', 'boats/level2-console.png');
+    this.load.image('level2-ttop', 'boats/level2-ttop.png');
+    this.load.image('level2-stern', 'boats/level2-stern.png');
+
     // For this demo, we'll create placeholder graphics
     // In production, replace with actual boat part images
     this.createPlaceholderGraphics();
@@ -606,6 +613,141 @@ export default class BuildBoatScene extends Phaser.Scene {
     graphics.generateTexture('lifeboat', 48, 20);
     graphics.clear();
 
+    // Center Console Hull - modern fishing boat hull
+    graphics.fillStyle(0xFFFFFF, 1);
+    graphics.beginPath();
+    graphics.moveTo(10, 35);
+    graphics.lineTo(10, 55);
+    graphics.lineTo(20, 65);
+    graphics.lineTo(170, 65);
+    graphics.lineTo(190, 45);
+    graphics.lineTo(195, 25);
+    graphics.lineTo(185, 18);
+    graphics.lineTo(20, 18);
+    graphics.closePath();
+    graphics.fillPath();
+    // Blue racing stripe
+    graphics.fillStyle(0x4A90E2, 1);
+    graphics.beginPath();
+    graphics.moveTo(20, 42);
+    graphics.lineTo(170, 42);
+    graphics.lineTo(185, 32);
+    graphics.lineTo(185, 28);
+    graphics.lineTo(170, 36);
+    graphics.lineTo(20, 36);
+    graphics.closePath();
+    graphics.fillPath();
+    // Deck area
+    graphics.fillStyle(0xE8E8E8, 1);
+    graphics.beginPath();
+    graphics.moveTo(20, 22);
+    graphics.lineTo(20, 50);
+    graphics.lineTo(170, 50);
+    graphics.lineTo(180, 35);
+    graphics.closePath();
+    graphics.fillPath();
+    // Outline
+    graphics.lineStyle(4, 0x2C3E50, 1);
+    graphics.beginPath();
+    graphics.moveTo(10, 35);
+    graphics.lineTo(10, 55);
+    graphics.lineTo(20, 65);
+    graphics.lineTo(170, 65);
+    graphics.lineTo(190, 45);
+    graphics.lineTo(195, 25);
+    graphics.lineTo(185, 18);
+    graphics.lineTo(20, 18);
+    graphics.closePath();
+    graphics.strokePath();
+    graphics.generateTexture('hull-center-console', 200, 70);
+    graphics.clear();
+
+    // Large Center Console - taller console with windshield
+    graphics.fillStyle(0xFFFFFF, 1);
+    graphics.fillRoundedRect(5, 25, 70, 50, 8);
+    graphics.lineStyle(3, 0xBDBDBD, 1);
+    graphics.strokeRoundedRect(5, 25, 70, 50, 8);
+    // Tall windshield
+    graphics.fillStyle(0x4A90E2, 0.35);
+    graphics.beginPath();
+    graphics.moveTo(10, 25);
+    graphics.lineTo(10, 5);
+    graphics.lineTo(70, 5);
+    graphics.lineTo(70, 25);
+    graphics.closePath();
+    graphics.fillPath();
+    graphics.lineStyle(2, 0x2C3E50, 1);
+    graphics.strokePath();
+    // Dashboard
+    graphics.fillStyle(0x2C3E50, 1);
+    graphics.fillRect(10, 55, 60, 15);
+    // Multiple screens/gauges
+    graphics.fillStyle(0x1A1A1A, 1);
+    graphics.fillRect(15, 58, 20, 9);
+    graphics.fillRect(42, 58, 20, 9);
+    // Steering wheel
+    graphics.lineStyle(4, 0xE8E8E8, 1);
+    graphics.strokeCircle(40, 63, 10);
+    graphics.strokeCircle(40, 63, 5);
+    graphics.generateTexture('console-large', 80, 75);
+    graphics.clear();
+
+    // Modern T-Top
+    // Support posts
+    graphics.fillStyle(0x95A5A6, 1);
+    graphics.fillRect(8, 15, 8, 50);
+    graphics.fillRect(94, 15, 8, 50);
+    // Top canopy
+    graphics.fillStyle(0xFFFFFF, 1);
+    graphics.fillRoundedRect(0, 0, 110, 18, 4);
+    graphics.lineStyle(3, 0x7F8C8D, 1);
+    graphics.strokeRoundedRect(0, 0, 110, 18, 4);
+    // Support bars
+    graphics.lineStyle(2, 0x7F8C8D, 1);
+    graphics.lineBetween(12, 18, 12, 60);
+    graphics.lineBetween(98, 18, 98, 60);
+    // Cross brace
+    graphics.lineBetween(12, 8, 98, 8);
+    graphics.generateTexture('ttop-modern', 110, 65);
+    graphics.clear();
+
+    // Leaning Post
+    // Main post
+    graphics.fillStyle(0x7F8C8D, 1);
+    graphics.fillRect(5, 0, 60, 8);
+    graphics.fillRect(5, 0, 8, 60);
+    graphics.fillRect(57, 0, 8, 60);
+    // Padded backrest
+    graphics.fillStyle(0xE74C3C, 1);
+    graphics.fillRoundedRect(10, 10, 50, 35, 6);
+    graphics.lineStyle(2, 0xC0392B, 1);
+    graphics.strokeRoundedRect(10, 10, 50, 35, 6);
+    // Cushion seams
+    graphics.lineStyle(1, 0xC0392B, 1);
+    graphics.lineBetween(35, 10, 35, 45);
+    // Footrest bar
+    graphics.fillStyle(0x95A5A6, 1);
+    graphics.fillRect(5, 50, 60, 6);
+    graphics.generateTexture('leaning-post', 70, 60);
+    graphics.clear();
+
+    // Bow Seating
+    // Left cushion
+    graphics.fillStyle(0xE74C3C, 1);
+    graphics.fillRoundedRect(2, 5, 32, 28, 6);
+    graphics.lineStyle(2, 0xC0392B, 1);
+    graphics.strokeRoundedRect(2, 5, 32, 28, 6);
+    // Right cushion
+    graphics.fillRoundedRect(41, 5, 32, 28, 6);
+    graphics.strokeRoundedRect(41, 5, 32, 28, 6);
+    // Center storage
+    graphics.fillStyle(0xFFFFFF, 1);
+    graphics.fillRoundedRect(34, 8, 7, 22, 3);
+    graphics.lineStyle(1, 0xBDBDBD, 1);
+    graphics.strokeRoundedRect(34, 8, 7, 22, 3);
+    graphics.generateTexture('bow-seat', 75, 35);
+    graphics.clear();
+
     graphics.destroy();
   }
 
@@ -694,48 +836,56 @@ export default class BuildBoatScene extends Phaser.Scene {
   }
 
   private createSailboatLevel(): BoatLevel {
-    // Level 2: Dual Console Outboard Boat - 4 parts positioned to look integrated
+    // Level 2: Real Photo Puzzle - Solace 32 CS Fishing Boat - 5 pieces
     const { width, height } = this.cameras.main;
     const centerX = width / 2;
     const waterY = height * 0.65;
 
     return {
       id: 2,
-      name: 'Outboard Boat',
-      boatType: 'outboard',
+      name: 'Fishing Boat',
+      boatType: 'center-console',
       background: 'ocean',
       parts: [
         {
-          key: 'hull',
+          key: 'level2-hull',
+          x: 80,
+          y: height - 120,
+          correctPosition: { x: centerX, y: waterY + 10 },
+          snapped: false,
+          friendlyName: 'boat bottom'
+        },
+        {
+          key: 'level2-bow',
           x: 100,
-          y: height - 150,
-          correctPosition: { x: centerX, y: waterY + 2 },
-          snapped: false,
-          friendlyName: 'boat body'
-        },
-        {
-          key: 'console',
-          x: width - 180,
-          y: 220,
-          correctPosition: { x: centerX + 8, y: waterY - 20 },
-          snapped: false,
-          friendlyName: 'steering wheel'
-        },
-        {
-          key: 'seat',
-          x: width - 130,
           y: height - 200,
-          correctPosition: { x: centerX - 30, y: waterY - 10 },
+          correctPosition: { x: centerX - 130, y: waterY - 25 },
           snapped: false,
-          friendlyName: 'comfy seat'
+          friendlyName: 'front part'
         },
         {
-          key: 'outboard',
-          x: 120,
-          y: height - 250,
-          correctPosition: { x: centerX - 80, y: waterY + 12 },
+          key: 'level2-console',
+          x: width - 180,
+          y: 180,
+          correctPosition: { x: centerX - 15, y: waterY - 30 },
           snapped: false,
-          friendlyName: 'motor'
+          friendlyName: 'middle cabin'
+        },
+        {
+          key: 'level2-ttop',
+          x: 120,
+          y: 100,
+          correctPosition: { x: centerX - 35, y: waterY - 65 },
+          snapped: false,
+          friendlyName: 'roof top'
+        },
+        {
+          key: 'level2-stern',
+          x: width - 140,
+          y: height - 170,
+          correctPosition: { x: centerX + 130, y: waterY - 15 },
+          snapped: false,
+          friendlyName: 'back motors'
         }
       ]
     };
@@ -765,7 +915,7 @@ export default class BuildBoatScene extends Phaser.Scene {
           key: 'console',
           x: width - 180,
           y: 250,
-          correctPosition: { x: centerX + 5, y: waterY - 20 },
+          correctPosition: { x: centerX + 10, y: waterY - 28 },
           snapped: false,
           friendlyName: 'steering wheel'
         },
@@ -773,7 +923,7 @@ export default class BuildBoatScene extends Phaser.Scene {
           key: 'ttop',
           x: width - 130,
           y: 170,
-          correctPosition: { x: centerX + 5, y: waterY - 50 },
+          correctPosition: { x: centerX + 10, y: waterY - 60 },
           snapped: false,
           friendlyName: 'sun shade'
         },
@@ -781,7 +931,7 @@ export default class BuildBoatScene extends Phaser.Scene {
           key: 'cooler',
           x: 150,
           y: height - 200,
-          correctPosition: { x: centerX - 40, y: waterY - 8 },
+          correctPosition: { x: centerX - 45, y: waterY - 5 },
           snapped: false,
           friendlyName: 'cooler box'
         },
@@ -789,7 +939,7 @@ export default class BuildBoatScene extends Phaser.Scene {
           key: 'outboard',
           x: 120,
           y: height - 250,
-          correctPosition: { x: centerX - 80, y: waterY + 12 },
+          correctPosition: { x: centerX - 82, y: waterY + 5 },
           snapped: false,
           friendlyName: 'motor'
         }
@@ -1348,14 +1498,24 @@ export default class BuildBoatScene extends Phaser.Scene {
       hull: 'boat body',
       'hull-cat': 'boat body',
       'hull-large': 'big boat body',
+      'hull-center-console': 'boat hull',
+      'level2-hull': 'boat bottom',
+      'level2-bow': 'front part',
+      'level2-console': 'middle cabin',
+      'level2-ttop': 'roof top',
+      'level2-stern': 'back motors',
       mast: 'tall mast',
       sail: 'windy sail',
       'sail-small': 'small sail',
       cabin: 'cozy cabin',
       console: 'steering wheel',
+      'console-large': 'steering console',
       outboard: 'motor',
       seat: 'comfy seat',
+      'bow-seat': 'front seats',
       ttop: 'sun shade',
+      'ttop-modern': 'shade top',
+      'leaning-post': 'leaning seat',
       cooler: 'cooler box',
       bridge: 'deck bridge',
       smokestack: 'smoke pipe',
@@ -1384,6 +1544,8 @@ export default class BuildBoatScene extends Phaser.Scene {
       'hull': 1,
       'hull-cat': 1,
       'hull-large': 1,
+      'hull-center-console': 1,
+      'level2-hull': 1,
       // Water level layer
       'bumper': 2,
       'outboard': 2,
@@ -1392,18 +1554,26 @@ export default class BuildBoatScene extends Phaser.Scene {
       'deck-large': 3,
       'bridge': 3,
       'lifeboat': 3,
+      'bow-seat': 3,
+      'level2-bow': 3,
+      'level2-stern': 3,
       // Floor items
       'seat': 4,
       'cooler': 4,
       'cargo': 4,
       // Mid-level structures
       'console': 5,
+      'console-large': 5,
+      'leaning-post': 5,
+      'level2-console': 5,
       'cabin': 6,
       'ship-bridge': 6,
       // Tall structures
       'mast': 7,
       'crane': 7,
       'ttop': 7,
+      'ttop-modern': 7,
+      'level2-ttop': 7,
       'smokestack': 8,
       'funnel': 8,
       // High elements - sails and flags

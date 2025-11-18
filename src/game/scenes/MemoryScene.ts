@@ -181,8 +181,6 @@ export default class MemoryScene extends Phaser.Scene {
     graphics.generateTexture('card-front', 120, 140);
     graphics.clear();
 
-    graphics.destroy();
-
     // Create icon textures (using emojis/text)
     const icons = ['⛵', '🚤', '🛥️', '⚓', '🐟', '🐠', '🦈', '🐙', '🦀', '🐚', '⭐', '🌊'];
 
@@ -192,6 +190,8 @@ export default class MemoryScene extends Phaser.Scene {
       graphics.generateTexture(`icon-${index}`, 80, 80);
       graphics.clear();
     });
+
+    graphics.destroy();
   }
 
   private createUI() {

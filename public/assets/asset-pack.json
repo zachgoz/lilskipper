@@ -1,0 +1,229 @@
+{
+  "section1": {
+    "files": [
+      {
+        "type": "image",
+        "key": "hull",
+        "url": "assets/boats/hull.png"
+      },
+      {
+        "type": "image",
+        "key": "hull-cat",
+        "url": "assets/boats/hull-cat.png"
+      },
+      {
+        "type": "image",
+        "key": "hull-large",
+        "url": "assets/boats/hull-large.png"
+      },
+      {
+        "type": "image",
+        "key": "mast",
+        "url": "assets/boats/mast.png"
+      },
+      {
+        "type": "image",
+        "key": "sail",
+        "url": "assets/boats/sail.png"
+      },
+      {
+        "type": "image",
+        "key": "sail-small",
+        "url": "assets/boats/sail-small.png"
+      },
+      {
+        "type": "image",
+        "key": "cabin",
+        "url": "assets/boats/cabin.png"
+      },
+      {
+        "type": "image",
+        "key": "console",
+        "url": "assets/boats/console.png"
+      },
+      {
+        "type": "image",
+        "key": "outboard",
+        "url": "assets/boats/outboard.png"
+      },
+      {
+        "type": "image",
+        "key": "seat",
+        "url": "assets/boats/seat.png"
+      },
+      {
+        "type": "image",
+        "key": "ttop",
+        "url": "assets/boats/ttop.png"
+      },
+      {
+        "type": "image",
+        "key": "cooler",
+        "url": "assets/boats/cooler.png"
+      },
+      {
+        "type": "image",
+        "key": "bridge",
+        "url": "assets/boats/bridge.png"
+      },
+      {
+        "type": "image",
+        "key": "smokestack",
+        "url": "assets/boats/smokestack.png"
+      },
+      {
+        "type": "image",
+        "key": "deck",
+        "url": "assets/boats/deck.png"
+      },
+      {
+        "type": "image",
+        "key": "deck-large",
+        "url": "assets/boats/deck-large.png"
+      },
+      {
+        "type": "image",
+        "key": "bumper",
+        "url": "assets/boats/bumper.png"
+      },
+      {
+        "type": "image",
+        "key": "flag",
+        "url": "assets/boats/flag.png"
+      },
+      {
+        "type": "image",
+        "key": "antenna",
+        "url": "assets/boats/antenna.png"
+      },
+      {
+        "type": "image",
+        "key": "cargo",
+        "url": "assets/boats/cargo.png"
+      },
+      {
+        "type": "image",
+        "key": "crane",
+        "url": "assets/boats/crane.png"
+      },
+      {
+        "type": "image",
+        "key": "ship-bridge",
+        "url": "assets/boats/ship-bridge.png"
+      },
+      {
+        "type": "image",
+        "key": "funnel",
+        "url": "assets/boats/funnel.png"
+      },
+      {
+        "type": "image",
+        "key": "lifeboat",
+        "url": "assets/boats/lifeboat.png"
+      },
+      {
+        "type": "image",
+        "key": "hull-center-console",
+        "url": "assets/boats/hull-center-console.png"
+      },
+      {
+        "type": "image",
+        "key": "console-large",
+        "url": "assets/boats/console-large.png"
+      },
+      {
+        "type": "image",
+        "key": "ttop-modern",
+        "url": "assets/boats/ttop-modern.png"
+      },
+      {
+        "type": "image",
+        "key": "leaning-post",
+        "url": "assets/boats/leaning-post.png"
+      },
+      {
+        "type": "image",
+        "key": "bow-seat",
+        "url": "assets/boats/bow-seat.png"
+      },
+      {
+        "type": "image",
+        "key": "level2-hull",
+        "url": "assets/boats/level2-hull.png"
+      },
+      {
+        "type": "image",
+        "key": "level2-bow",
+        "url": "assets/boats/level2-bow.png"
+      },
+      {
+        "type": "image",
+        "key": "level2-console",
+        "url": "assets/boats/level2-console.png"
+      },
+      {
+        "type": "image",
+        "key": "level2-ttop",
+        "url": "assets/boats/level2-ttop.png"
+      },
+      {
+        "type": "image",
+        "key": "level2-stern",
+        "url": "assets/boats/level2-stern.png"
+      }
+    ]
+  },
+  "section2": {
+    "files": [
+      {
+        "type": "image",
+        "key": "card-front",
+        "url": "assets/cards/card-front.png"
+      },
+      {
+        "type": "image",
+        "key": "card-back",
+        "url": "assets/cards/card-back.png"
+      }
+    ]
+  },
+  "section3": {
+    "files": [
+      {
+        "type": "audio",
+        "key": "tap",
+        "url": "assets/audio/tap.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "whoosh",
+        "url": "assets/audio/whoosh.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "snap",
+        "url": "assets/audio/snap.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "ding",
+        "url": "assets/audio/ding.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "success",
+        "url": "assets/audio/success.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "cheer",
+        "url": "assets/audio/cheer.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "horn",
+        "url": "assets/audio/horn.mp3"
+      }
+    ]
+  }
+}
